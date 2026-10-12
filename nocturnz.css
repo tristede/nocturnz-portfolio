@@ -82,6 +82,9 @@ a{ color: inherit; }
   text-decoration:none; color: var(--vif);
 }
 
+.lang{ font-size:14px; letter-spacing:.08em; text-decoration:none; color: var(--texte-doux); }
+.lang:hover{ color: var(--vif); }
+
 /* ---------- Ouverture ---------- */
 .ouverture{ padding: 46px 0 88px; }
 /* Le titre traverse la page entiere : enferme dans une colonne de 530 px, un

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nocturnz</title>
+<link rel="canonical" href="https://nocturnz.xyz/en/">
+<link rel="alternate" hreflang="fr" href="https://nocturnz.xyz/">
+<link rel="alternate" hreflang="en" href="https://nocturnz.xyz/en/">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="alternate icon" href="../favicon.ico">
+<meta name="description" content="A portfolio that looks like you, filled in by you. Free, no subscription, no code.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nocturnz.xyz/en/">
+<meta property="og:title" content="Nocturnz — a portfolio that looks like you">
+<meta property="og:description" content="A portfolio you fill in yourself, at your own address, with no subscription and no code. The content is yours.">
+<meta name="theme-color" content="#0a0713">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Schoolbell&display=swap" rel="stylesheet">
+<!-- Le ciel d'abord : il est eteint par defaut, et c'est la feuille de la
+     vitrine qui l'allume — a specificite egale, la derniere chargee gagne. -->
+<link rel="stylesheet" href="../ciel.css">
+<link rel="stylesheet" href="../nocturnz.css">
+</head>
+<body>
+
+<div class="fond"></div>
+<div class="starfield" aria-hidden="true"><span></span></div>
+
+<!-- Une page de cette longueur n'a pas besoin d'une navigation : le nom suffit,
+     et le seul lien utile est le bouton de l'accroche. -->
+<header class="bar">
+  <a class="mark" href="#top" id="js-nom">Nocturnz</a>
+  <a class="lang" href="../" hreflang="fr" lang="fr">FR</a>
+</header>
+
+<main id="top">
+
+  <section class="ouverture">
+    <div class="wrap">
+      <h1>A portfolio<br><span class="vif">that looks like you</span></h1>
+    </div>
+    <div class="wrap ouverture-grille">
+      <div>
+        <p class="sous">No subscription, not a line of code.</p>
+        <p class="agir">
+          <a class="bouton" href="#demander">Request mine</a>
+          <a class="essai" href="../demo/admin.html">or try one right now</a>
+        </p>
+      </div>
+      <!-- Ce que la page vend de plus concret n'apparaissait nulle part : une
+           adresse a soi. La montrer vaut mieux que meubler le vide avec un
+           ornement — et le domaine vient de config.json, comme le reste. -->
+      <div class="adresse" id="js-adresse">
+        <p class="url">
+          <span class="pseudo">yourname</span><wbr><span class="fin"><span class="tld" id="js-tld">.nocturnz.xyz</span><span class="curseur" aria-hidden="true"></span></span>
+        </p>
+        <p class="glose">or your own domain name,<br>if you already have one</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="comment">
+    <div class="wrap">
+      <h2>Three steps</h2>
+      <ol class="etapes">
+        <li>
+          <span class="chiffre">01</span>
+          <div>
+            <h3>You describe your project</h3>
+            <p>Your name, what you do, what you want to show.</p>
+          </div>
+        </li>
+        <li>
+          <span class="chiffre">02</span>
+          <div>
+            <h3>You get an address</h3>
+            <p>A subdomain with your name, or your own domain name if you already have one.</p>
+          </div>
+        </li>
+        <li>
+          <span class="chiffre">03</span>
+          <div>
+            <h3>You fill it in</h3>
+            <p>An editing panel where you click a text to change it and drop your images where you want them. Nothing to install.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="pourquoi">
+    <div class="wrap">
+      <h2>What differs from a platform</h2>
+      <div class="arguments">
+        <div class="argument">
+          <h3>The content is yours</h3>
+          <p>Texts, images and documents live in a repository you own. If Nocturnz stops tomorrow, your site keeps working.</p>
+        </div>
+        <div class="argument">
+          <h3>No subscription</h3>
+          <p>Hosting costs nothing. Only a domain name costs money, and you buy it yourself, in your name.</p>
+        </div>
+        <div class="argument">
+          <h3>No imposed branding</h3>
+          <p>No banner at the bottom of the page. It's your site, not a showcase for Nocturnz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="etat">
+    <div class="wrap">
+      <h2>Where Nocturnz stands</h2>
+      <div class="arguments">
+        <div class="argument">
+          <h3>A first site is live</h3>
+          <p>The engine already runs: Adam's portfolio is published at <a href="https://adam.nocturnz.xyz/">adam.nocturnz.xyz</a>, with its own editing panel.</p>
+        </div>
+        <div class="argument">
+          <h3>Try it without an account</h3>
+          <p>The <a href="../demo/admin.html">sandbox</a> lets you edit everything in the browser. Nothing is published.</p>
+        </div>
+        <div class="argument">
+          <h3>Open to the first portfolios</h3>
+          <p>The service is not yet launched at scale. Every request is read and gets a real reply.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="demander">
+    <div class="wrap demande">
+      <div>
+        <h2>Describe what you show</h2>
+
+        <form id="js-form">
+          <label for="f-nom">Your name</label>
+          <input id="f-nom" name="nom" type="text" required autocomplete="name">
+
+          <label for="f-email">Your email</label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+
+          <label for="f-message">What you do, and what you want to show</label>
+          <textarea id="f-message" name="message" required></textarea>
+
+          <div class="envoi"><button class="bouton" type="submit" id="js-envoyer">Send</button></div>
+          <div class="statut" id="js-statut"></div>
+          <p class="note">Your address is only used to reply to you. It is never sold or added to a list.</p>
+        </form>
+      </div>
+
+      <aside class="mot">
+        Every message gets a real reply.<br>
+        This is not an automated form.
+        <span class="signature">Adam, Brussels</span>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span id="js-nom-pied">Nocturnz</span>
+    <span><a href="https://adam.nocturnz.xyz/">See a full portfolio</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Le nom du service n'est pas arrêté : il vient de la configuration, pour
+  // qu'un changement de domaine ne demande pas de relire cette page.
+  var cfg = { nom: 'Nocturnz', domaine: '', email: '', formulaire: '' };
+
+  fetch('../config.json', { cache: 'no-cache' })
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .catch(function(){ return null; })
+    .then(function(c){
+      if (c) cfg = Object.assign(cfg, c);
+      document.getElementById('js-nom').textContent = cfg.nom;
+      document.getElementById('js-nom-pied').textContent = cfg.nom;
+      if (cfg.domaine) document.getElementById('js-tld').textContent = '.' + cfg.domaine;
+      document.title = document.title.replace(/^Nocturnz/, cfg.nom);
+    });
+
+  // Parallaxe : l'adresse remonte un peu moins vite que la page. Le calcul se
+  // fait dans une frame d'animation — un listener de defilement qui ecrit un
+  // transform a chaque evenement fait saccader le defilement lui-meme.
+  (function(){
+    var bloc = document.getElementById('js-adresse');
+    if (!bloc) return;
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var attendue = false;
+    function poser(){
+      attendue = false;
+      var y = window.pageYOffset || 0;
+      // au-dela de l'accroche le bloc est sorti de l'ecran : inutile de
+      // continuer a calculer
+      if (y > innerHeight * 1.4) return;
+      bloc.style.transform = 'translate3d(0,' + (y * -0.13).toFixed(1) + 'px,0) rotate(' +
+        (y * 0.004).toFixed(2) + 'deg)';
+    }
+    addEventListener('scroll', function(){
+      if (attendue) return;
+      attendue = true;
+      requestAnimationFrame(poser);
+    }, { passive: true });
+    poser();
+  })();
+
+  var form = document.getElementById('js-form');
+  var statut = document.getElementById('js-statut');
+  var bouton = document.getElementById('js-envoyer');
+
+  function dire(texte, genre){
+    statut.textContent = texte;
+    statut.className = 'statut' + (genre ? ' ' + genre : '');
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var donnees = {
+      nom: form.nom.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim()
+    };
+    if (!donnees.nom || !donnees.email || !donnees.message){
+      dire('Your name, email or message is missing.', 'err');
+      return;
+    }
+
+    // Tant qu'aucun relais n'est en place, on n'invente pas un envoi qui
+    // n'aurait pas lieu : on prépare le mail dans le logiciel de la personne.
+    // C'est moins élégant, mais le message part vraiment.
+    if (!cfg.formulaire){
+      var sujet = 'Portfolio request — ' + donnees.nom;
+      var corps = 'Name: ' + donnees.nom +
+        '\nEmail: ' + donnees.email +
+        '\n\n' + donnees.message;
+      window.location.href = 'mailto:' + (cfg.email || '') +
+        '?subject=' + encodeURIComponent(sujet) +
+        '&body=' + encodeURIComponent(corps);
+      dire('Your email app opens with the message ready to send.', 'ok');
+      return;
+    }
+
+    bouton.disabled = true;
+    dire('Sending…');
+    fetch(cfg.formulaire, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(donnees)
+    })
+      .then(function(r){
+        if (!r.ok) throw new Error('Erreur ' + r.status);
+        form.reset();
+        dire('Message sent. Quick reply.', 'ok');
+      })
+      .catch(function(err){
+        dire('Sending failed (' + err.message + '). Write directly to ' + (cfg.email || 'the site address') + '.', 'err');
+      })
+      .then(function(){ bouton.disabled = false; });
+  });
+})();
+</script>
+
+</body>
+</html>
