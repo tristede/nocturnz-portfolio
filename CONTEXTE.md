@@ -18,7 +18,9 @@ nouveaux portfolios — il ne le maintient pas.
 |---|---|
 | Dossier local | `.../PROJETS/WEB/portfolio-adam` |
 | Dépôt | `github.com/tristede/nocturnz-portfolio` — branche `main` |
-| Vitrine Nocturnz | https://nocturnz.xyz/ |
+| Accueil de la suite | https://nocturnz.xyz/ |
+| Vitrine du portfolio (ancien accueil) | https://nocturnz.xyz/portfolio/ |
+| Pages des autres outils | https://nocturnz.xyz/review/ · https://nocturnz.xyz/todo/ |
 | Portfolio d'Adam (dépôt séparé, `tristede/adam`) | https://adam.nocturnz.xyz/ |
 | Bac à sable (démo Nocturnz) | `/demo/admin.html` |
 | Serveur local | `python3 -m http.server 8000` dans le dossier du projet |
@@ -37,8 +39,12 @@ déjà configurée, ne pas y toucher sans raison) :
 ## Structure
 
 ```
-index.html                 vitrine Nocturnz (page produit, formulaire de contact)
-nocturnz.css               design de la vitrine
+index.html                 accueil de la suite d'outils (nocturnz.xyz)
+portfolio/index.html       vitrine du portfolio : l'ancien accueil, formulaire de contact compris
+review/index.html          page de présentation de Nocturnz Review (l'outil vit dans son propre dépôt)
+todo/index.html            page de Nocturnz Todo (projet qui démarre)
+suite.js                   script commun aux trois pages de la suite (config.json, mails, défilement des noms)
+nocturnz.css               design commun à toutes les pages
 ciel.css                   ciel étoilé animé
 demo/                      bac à sable : admin + portfolio-jouet autonomes, rien n'est publié
 tools/nouveau-portfolio.py fabrique un nouveau portfolio vierge (copie le moteur depuis tristede/adam)

@@ -13,11 +13,16 @@ Nocturnz devient une suite d'outils pour créateurs, un dépôt par outil :
 | [`nocturnz-review`](https://github.com/tristede/nocturnz-review) | review vidéo sans abonnement (commentaires à l'image près, versions, partage) |
 | [`nocturnz-todo`](https://github.com/tristede/nocturnz-todo) | liste de tâches pour créateurs (en démarrage) |
 
-## À la racine — la vitrine [Nocturnz](https://nocturnz.xyz/)
+## À la racine — l'accueil de la suite [Nocturnz](https://nocturnz.xyz/)
 
-Une page produit : Nocturnz fabrique des portfolios que chacun remplit lui-même,
-sans abonnement ni code. `index.html` + `nocturnz.css`, plus `ciel.css` (ciel
-étoilé animé) et `config.json` (identité du service).
+`index.html` présente les trois outils. Les pages `review/` et `todo/` présentent
+les deux autres (leur code vit dans leurs dépôts). Le design est partagé
+(`nocturnz.css`, `ciel.css`), l'identité du service vit dans `config.json`.
+
+## `/portfolio` — la vitrine du portfolio
+
+L'ancien accueil, déplacé : une page produit où Nocturnz fabrique des portfolios
+que chacun remplit lui-même, sans abonnement ni code (`portfolio/index.html`).
 
 ## Le moteur et l'exemple vivant
 

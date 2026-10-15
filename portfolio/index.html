@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Nocturnz</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="alternate icon" href="../favicon.ico">
+<meta name="description" content="Un portfolio à votre image, que vous remplissez vous-même. Gratuit, sans abonnement, sans code.">
+<link rel="canonical" href="https://nocturnz.xyz/portfolio/">
+<meta property="og:title" content="Portfolio — Nocturnz">
+<meta property="og:description" content="Un portfolio à votre image, que vous remplissez vous-même. Gratuit, sans abonnement, sans code.">
+<meta property="og:url" content="https://nocturnz.xyz/portfolio/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0713">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Schoolbell&display=swap" rel="stylesheet">
+<!-- Le ciel d'abord : il est eteint par defaut, et c'est la feuille de la
+     vitrine qui l'allume — a specificite egale, la derniere chargee gagne. -->
+<link rel="stylesheet" href="../ciel.css">
+<link rel="stylesheet" href="../nocturnz.css">
+</head>
+<body>
+
+<div class="fond"></div>
+<div class="starfield" aria-hidden="true"><span></span></div>
+
+<header class="bar">
+  <a class="mark" href="../" id="js-nom">Nocturnz</a>
+  <nav class="nav" aria-label="Outils">
+    <a href="../portfolio/" aria-current="page">Portfolio</a>
+    <a href="../review/">Review</a>
+    <a href="../todo/">Todo</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="ouverture">
+    <div class="wrap">
+      <h1>Un portfolio<br><span class="vif">à votre image</span></h1>
+    </div>
+    <div class="wrap ouverture-grille">
+      <div>
+        <p class="sous">Sans abonnement, sans une ligne de code.</p>
+        <p class="agir">
+          <a class="bouton" href="#demander">Demander le mien</a>
+          <a class="essai" href="../demo/admin.html">ou essayez-en un, tout de suite</a>
+        </p>
+      </div>
+      <!-- Ce que la page vend de plus concret n'apparaissait nulle part : une
+           adresse a soi. La montrer vaut mieux que meubler le vide avec un
+           ornement — et le domaine vient de config.json, comme le reste. -->
+      <div class="adresse" id="js-adresse">
+        <p class="url">
+          <span class="pseudo">votrepseudo</span><wbr><span class="fin"><span class="tld" id="js-tld">.nocturnz.xyz</span><span class="curseur" aria-hidden="true"></span></span>
+        </p>
+        <p class="glose">ou votre propre nom de domaine,<br>si vous en avez déjà un</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="comment">
+    <div class="wrap">
+      <h2>Trois étapes</h2>
+      <ol class="etapes">
+        <li>
+          <span class="chiffre">01</span>
+          <div>
+            <h3>Vous décrivez votre projet</h3>
+            <p>Votre nom, ce que vous faites, ce que vous voulez montrer.</p>
+          </div>
+        </li>
+        <li>
+          <span class="chiffre">02</span>
+          <div>
+            <h3>Vous recevez une adresse</h3>
+            <p>Un sous-domaine à votre pseudo, ou votre propre nom de domaine si vous en avez déjà un.</p>
+          </div>
+        </li>
+        <li>
+          <span class="chiffre">03</span>
+          <div>
+            <h3>Vous le remplissez</h3>
+            <p>Un panneau d'édition où vous cliquez sur un texte pour le changer et déposez vos images là où vous les voulez. Rien à installer.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="pourquoi">
+    <div class="wrap">
+      <h2>Ce qui change par rapport à une plateforme</h2>
+      <div class="arguments">
+        <div class="argument">
+          <h3>Le contenu est à vous</h3>
+          <p>Textes, images et documents vivent dans un dépôt qui vous appartient. Si Nocturnz s'arrête demain, votre site continue de fonctionner.</p>
+        </div>
+        <div class="argument">
+          <h3>Pas d'abonnement</h3>
+          <p>L'hébergement ne coûte rien. Seul un nom de domaine se paie, et vous l'achetez vous-même, à votre nom.</p>
+        </div>
+        <div class="argument">
+          <h3>Aucune marque imposée</h3>
+          <p>Pas de bandeau en bas de page. C'est votre site, pas une vitrine pour Nocturnz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="demander">
+    <div class="wrap demande">
+      <div>
+        <h2>Décrivez ce que vous montrez</h2>
+
+        <form id="js-form">
+          <label for="f-nom">Votre nom</label>
+          <input id="f-nom" name="nom" type="text" required autocomplete="name">
+
+          <label for="f-email">Votre email</label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+
+          <label for="f-message">Ce que vous faites, et ce que vous voulez montrer</label>
+          <textarea id="f-message" name="message" required></textarea>
+
+          <div class="envoi"><button class="bouton" type="submit" id="js-envoyer">Envoyer</button></div>
+          <div class="statut" id="js-statut"></div>
+          <p class="note">Votre adresse ne sert qu'à vous répondre. Elle n'est ni revendue, ni ajoutée à une liste.</p>
+        </form>
+      </div>
+
+      <aside class="mot">
+        Chaque message reçoit une vraie réponse.<br>
+        Ce n'est pas un formulaire automatique.
+        <span class="signature">Adam, Brussels</span>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span id="js-nom-pied">Nocturnz</span>
+    <span><a href="https://adam.nocturnz.xyz/">Voir un portfolio en entier</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Le nom du service n'est pas arrêté : il vient de la configuration, pour
+  // qu'un changement de domaine ne demande pas de relire cette page.
+  var cfg = { nom: 'Nocturnz', domaine: '', email: '', formulaire: '' };
+
+  fetch('../config.json', { cache: 'no-cache' })
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .catch(function(){ return null; })
+    .then(function(c){
+      if (c) cfg = Object.assign(cfg, c);
+      document.getElementById('js-nom').textContent = cfg.nom;
+      document.getElementById('js-nom-pied').textContent = cfg.nom;
+      if (cfg.domaine) document.getElementById('js-tld').textContent = '.' + cfg.domaine;
+      document.title = document.title.replace(/Nocturnz$/, cfg.nom);
+    });
+
+  // Parallaxe : l'adresse remonte un peu moins vite que la page. Le calcul se
+  // fait dans une frame d'animation — un listener de defilement qui ecrit un
+  // transform a chaque evenement fait saccader le defilement lui-meme.
+  (function(){
+    var bloc = document.getElementById('js-adresse');
+    if (!bloc) return;
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var attendue = false;
+    function poser(){
+      attendue = false;
+      var y = window.pageYOffset || 0;
+      // au-dela de l'accroche le bloc est sorti de l'ecran : inutile de
+      // continuer a calculer
+      if (y > innerHeight * 1.4) return;
+      bloc.style.transform = 'translate3d(0,' + (y * -0.13).toFixed(1) + 'px,0) rotate(' +
+        (y * 0.004).toFixed(2) + 'deg)';
+    }
+    addEventListener('scroll', function(){
+      if (attendue) return;
+      attendue = true;
+      requestAnimationFrame(poser);
+    }, { passive: true });
+    poser();
+  })();
+
+  var form = document.getElementById('js-form');
+  var statut = document.getElementById('js-statut');
+  var bouton = document.getElementById('js-envoyer');
+
+  function dire(texte, genre){
+    statut.textContent = texte;
+    statut.className = 'statut' + (genre ? ' ' + genre : '');
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var donnees = {
+      nom: form.nom.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim()
+    };
+    if (!donnees.nom || !donnees.email || !donnees.message){
+      dire('Il manque votre nom, votre email ou votre message.', 'err');
+      return;
+    }
+
+    // Tant qu'aucun relais n'est en place, on n'invente pas un envoi qui
+    // n'aurait pas lieu : on prépare le mail dans le logiciel de la personne.
+    // C'est moins élégant, mais le message part vraiment.
+    if (!cfg.formulaire){
+      var sujet = 'Demande de portfolio — ' + donnees.nom;
+      var corps = 'Nom : ' + donnees.nom +
+        '\nEmail : ' + donnees.email +
+        '\n\n' + donnees.message;
+      window.location.href = 'mailto:' + (cfg.email || '') +
+        '?subject=' + encodeURIComponent(sujet) +
+        '&body=' + encodeURIComponent(corps);
+      dire('Votre logiciel de messagerie s\'ouvre avec le message prêt à envoyer.', 'ok');
+      return;
+    }
+
+    bouton.disabled = true;
+    dire('Envoi…');
+    fetch(cfg.formulaire, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(donnees)
+    })
+      .then(function(r){
+        if (!r.ok) throw new Error('Erreur ' + r.status);
+        form.reset();
+        dire('Message envoyé. Réponse rapide.', 'ok');
+      })
+      .catch(function(err){
+        dire('L\'envoi a échoué (' + err.message + '). Écrivez directement à ' + (cfg.email || 'l\'adresse du site') + '.', 'err');
+      })
+      .then(function(){ bouton.disabled = false; });
+  });
+})();
+</script>
+
+</body>
+</html>

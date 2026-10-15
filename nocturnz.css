@@ -202,7 +202,7 @@ textarea{ min-height:110px; resize:vertical; }
 .mot::before{
   content:""; position:absolute; top:-16px; left:34%;
   width:86px; height:32px;
-  background: url('adam/images/tape/tape-2.webp') center/100% 100% no-repeat;
+  background: url('demo/images/tape/tape-2.webp') center/100% 100% no-repeat;
   transform: rotate(-4deg); opacity:.9;
 }
 .mot .signature{ display:block; margin-top:16px; font-size:23px; color: var(--vif-fonce); }
@@ -216,11 +216,53 @@ footer .wrap{ display:flex; justify-content:space-between; gap:18px; flex-wrap:w
 footer a{ text-decoration:none; border-bottom:1px solid var(--trait-fort); }
 footer a:hover{ color: var(--clair); border-color: var(--vif); }
 
+/* ---------- La suite d'outils ---------- */
+/* Une navigation de trois mots : le nom d'un outil est son adresse. */
+.bar{ flex-wrap:wrap; }
+.nav{ display:flex; gap:26px; font-size:15.5px; }
+.nav a{
+  color: var(--texte-doux); text-decoration:none;
+  border-bottom:1px solid transparent; padding-bottom:3px;
+}
+.nav a:hover{ color: var(--clair); }
+.nav a[aria-current]{ color: var(--texte); border-bottom-color: var(--vif); }
+
+/* Les outils s'alignent comme les etapes de la vitrine : un grand chiffre, un
+   titre, une phrase — et l'etat a droite, en toutes lettres plutot qu'en badge. */
+.outils{ list-style:none; margin:44px 0 0; padding:0; }
+.outil{
+  display:grid; grid-template-columns: minmax(84px,1fr) minmax(0,6fr) minmax(130px,1.6fr);
+  gap:8px 34px; align-items:start; padding:34px 0;
+  border-top:1px solid var(--trait); text-decoration:none; color:inherit;
+}
+.outils li:first-child .outil{ border-top:0; }
+.outil h3{ font-size: clamp(26px, 3.2vw, 40px); margin-bottom:10px; transition: color .14s ease; }
+.outil p{ color: var(--texte-doux); max-width:50ch; margin:0; }
+.outil:hover h3{ color: var(--clair); }
+.etat{
+  justify-self:end; text-align:right; padding-top:8px;
+  font-size:13px; font-weight:500; letter-spacing:.16em; text-transform:uppercase;
+  color: var(--texte-faible); white-space:nowrap;
+}
+.etat.ok{ color: var(--clair); }
+.etat .fleche{ display:inline-block; margin-left:10px; transition: transform .14s ease; }
+.outil:hover .fleche{ transform: translateX(5px); }
+
+/* Page d'un outil : l'etat, dit sans detour. */
+.etat-ligne{ margin:0 0 22px; font-size:13px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color: var(--clair); }
+/* La maquette n'est pas une capture : un trace simplifie de ce que fait l'outil. */
+.maquette{ padding-top:6px; }
+.maquette svg{ display:block; width:100%; height:auto; border:1px solid var(--trait-fort); }
+.maquette .legende{ font-family: var(--main); font-size:17px; color: var(--texte-doux); margin:14px 0 0; }
+
 /* ---------- Ecrans etroits ---------- */
 @media (max-width: 900px){
   .ouverture-grille, .demande{ grid-template-columns: 1fr; gap:32px; }
   .etapes li{ grid-template-columns:1fr; gap:6px; }
   .mot{ margin-top:34px; }
+  .outil{ grid-template-columns:1fr; gap:6px; padding:28px 0; }
+  .etat{ justify-self:start; text-align:left; padding-top:6px; }
+  .nav{ gap:20px; }
 }
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
