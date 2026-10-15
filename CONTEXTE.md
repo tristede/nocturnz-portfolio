@@ -21,6 +21,15 @@ nouveaux portfolios — il ne le maintient pas.
 | Accueil de la suite | https://nocturnz.xyz/ |
 | Vitrine du portfolio (ancien accueil) | https://nocturnz.xyz/portfolio/ |
 | Pages des autres outils | https://nocturnz.xyz/review/ · https://nocturnz.xyz/todo/ |
+| L'outil Review lui-même | `review.nocturnz.xyz` (prévu, pas encore en ligne) |
+
+**Où vit quoi.** Ce dépôt est servi par GitHub Pages (statique) : il porte l'accueil, la
+vitrine du portfolio et les *pages de présentation* de Review et Todo. L'outil Review
+est une application avec serveur (base SQLite, lecture vidéo) : il ne peut pas tourner
+ici, il aura sa propre adresse `review.nocturnz.xyz`. Le DNS est chez **Infomaniak** :
+il suffira d'y créer un enregistrement vers le serveur quand l'hébergement sera choisi,
+puis d'ajouter un bouton « Ouvrir l'outil » sur `review/index.html`. Ne pas y mettre le
+lien avant que l'adresse réponde.
 | Portfolio d'Adam (dépôt séparé, `tristede/adam`) | https://adam.nocturnz.xyz/ |
 | Bac à sable (démo Nocturnz) | `/demo/admin.html` |
 | Serveur local | `python3 -m http.server 8000` dans le dossier du projet |
