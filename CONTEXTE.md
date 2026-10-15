@@ -17,7 +17,7 @@ nouveaux portfolios — il ne le maintient pas.
 | | |
 |---|---|
 | Dossier local | `.../PROJETS/WEB/portfolio-adam` |
-| Dépôt | `github.com/tristede/portfolio` — branche `main` |
+| Dépôt | `github.com/tristede/nocturnz-portfolio` — branche `main` |
 | Vitrine Nocturnz | https://nocturnz.xyz/ |
 | Portfolio d'Adam (dépôt séparé, `tristede/adam`) | https://adam.nocturnz.xyz/ |
 | Bac à sable (démo Nocturnz) | `/demo/admin.html` |

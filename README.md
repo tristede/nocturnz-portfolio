@@ -1,7 +1,17 @@
-# portfolio (dépôt tristede/portfolio)
+# nocturnz-portfolio (dépôt tristede/nocturnz-portfolio)
 
 Ce dépôt sert la vitrine du produit **Nocturnz**, en HTML/CSS/JS pur (aucune
 dépendance, aucun build), via GitHub Pages sur la branche `main`.
+
+## La suite Nocturnz
+
+Nocturnz devient une suite d'outils pour créateurs, un dépôt par outil :
+
+| Dépôt | Rôle |
+|---|---|
+| [`nocturnz-portfolio`](https://github.com/tristede/nocturnz-portfolio) | ce dépôt : la vitrine et le moteur de portfolios |
+| [`nocturnz-review`](https://github.com/tristede/nocturnz-review) | review vidéo sans abonnement (commentaires à l'image près, versions, partage) |
+| [`nocturnz-todo`](https://github.com/tristede/nocturnz-todo) | liste de tâches pour créateurs (en démarrage) |
 
 ## À la racine — la vitrine [Nocturnz](https://nocturnz.xyz/)
 
