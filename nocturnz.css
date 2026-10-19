@@ -217,7 +217,7 @@ footer a{ text-decoration:none; border-bottom:1px solid var(--trait-fort); }
 footer a:hover{ color: var(--clair); border-color: var(--vif); }
 
 /* ---------- La suite d'outils ---------- */
-/* Une navigation de trois mots : le nom d'un outil est son adresse. */
+/* Une navigation compacte : le nom d'un outil est son adresse. */
 .bar{ flex-wrap:wrap; }
 .nav{ display:flex; gap:26px; font-size:15.5px; }
 .nav a{

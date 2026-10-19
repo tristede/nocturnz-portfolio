@@ -1,4 +1,4 @@
-/* Script commun aux pages de la suite (accueil, review, todo).
+/* Script commun aux pages de la suite (accueil, review, todo, edit).
    Il ne fait que trois choses, et la page marche sans lui :
    - lire le nom et l'adresse mail dans config.json (une seule source) ;
    - faire défiler les noms d'outils dans l'adresse de l'accueil ;
@@ -25,7 +25,7 @@
 
   var mot = document.getElementById('js-outil');
   if (mot && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
-    var noms = ['portfolio', 'review', 'todo'], i = 0;
+    var noms = ['portfolio', 'review', 'todo', 'edit'], i = 0;
     setInterval(function () { i = (i + 1) % noms.length; mot.textContent = noms[i]; }, 2600);
   }
 })();
