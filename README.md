@@ -12,7 +12,7 @@ Nocturnz devient une suite d'outils pour créateurs, un dépôt par outil :
 | [`nocturnz-portfolio`](https://github.com/tristede/nocturnz-portfolio) | ce dépôt : la vitrine et le moteur de portfolios |
 | [`nocturnz-review`](https://github.com/tristede/nocturnz-review) | review vidéo sans abonnement (commentaires à l'image près, versions, partage) |
 | [`nocturnz-todo`](https://github.com/tristede/nocturnz-todo) | liste de tâches pour créateurs (en démarrage) |
-| [`nocturnz-edit`](https://github.com/tristede/nocturnz-edit) | extension open source pour Adobe Premiere Pro, traitements locaux |
+| `nocturnz-edit` | extension pour Adobe Premiere Pro, traitements locaux (en développement, non public) |
 
 ## À la racine — l'accueil de la suite [Nocturnz](https://nocturnz.xyz/)
 
